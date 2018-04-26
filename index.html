@@ -1,14 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="jp">
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Assets/css/slick.css">
     <link rel="stylesheet" href="Assets/css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="Assets/js/main.js"></script>
+    <script type="text/javascript" src="Assets/js/jquery.drawsvg.js"></script>
     <title>Eduperience|Home</title>
 </head>
 
 <body>
-    <div class="Title"><span class="Title">Eduperience</span><span class="Sub">体験型の教育。Edu×Experience</span></div>
+    <div class="Title">
+        <span class="Title">Eduperience</span>
+        <span class="Sub">体験型の教育。教育者と子供のマッチングサービス。</span>
+    </div>
+    <script>
+        $(window).scroll(function() {
+            var Num = $(window).scrollTop() / 500;
+            var Num2 = $(window).scrollTop() * .0004; // higher number for more zoom
+            var Num2mod = Num2 + 1;
+            var Num3 = $(window).scrollTop() * .2; // Title speed
+            var Num3mod = Num3 + 1;
+            return $('.shade').css('opacity', Num),
+                $("div.Title").css({
+                    opacity: 1 / (Num + 1)
+                });
+        });
+    </script>
+    <div class="StartContent">
+    </div>
+    <!--<svg viewBox="0 0 190 132" style="background-color:#ffffff00" xmlns="http://www.w3.org/2000/svg" width="190" height="132">
+    <g stroke="black" stroke-width="2" fill="none">
+      <path d="M183.618.5c3.234 0 5.882 2.647 5.882 5.88v119.24c0 3.233-2.648 5.88-5.882 5.88H6.382C3.148 131.5.5 128.853.5 125.62V6.38C.5 3.147 3.148.5 6.382.5h177.236z" />
+      <path d="M184 1c0 .833-72.32 78.49-72.32 78.49-8.915 9.376-23.5 9.376-32.416-.007C79.264 79.483 5 1.03 5 1" />
+      <path d="M66.816 20.924c0 7.063-5.727 12.788-12.793 12.788-7.07 0-12.793-5.725-12.793-12.788 0-7.063 5.722-12.788 12.793-12.788 7.066 0 12.793 5.725 12.793 12.788z" />
+      <path d="M75.5 13.5h28" />
+      <path d="M82.5 21.5h33" />
+      <path d="M74.5 30.5h32" />
+      <path d="M2.5 129.5l55-55" />
+      <path d="M187.5 129.5l-55-55" />
+    </g>
+  </svg>　　豊富なメールサービス-->
+    <script>
+        var created = false;
+        $(window).scroll(function() { // スクロール毎にイベントが発火します。
+            var scr_count = $(window).scrollTop();
+            if (!created) {
+                if (scr_count > 100) {
+                    var $svg = $('svg').drawsvg();
+                    $svg.drawsvg('animate');
+                    created = true;
+                } else {
+
+                }
+            }
+        })
+    </script>
+    <ul class="slider">
+        <img src="Assets/image/SliderTest/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202018-04-26%2011.21.58.png" width="50vw" height="auto">
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </ul>
+    <button onclick="Next()"></button>
+    <script>
+        function Next() {
+            $(".slider").slick('slickNext');
+        }
+    </script>
+    <!--
+    <section class="Slider">
+        <img src="Assets/image/SliderTest/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202018-04-26%2011.21.58.png" width="50vw" height="auto">
+        <img src="Assets/image/SliderTest/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202018-04-26%2011.21.58.png" width="50vw" height="auto"> <img src="Assets/image/SliderTest/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202018-04-26%2011.21.58.png" width="50vw" height="auto"> <img src="Assets/image/SliderTest/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202018-04-26%2011.21.58.png" width="50vw" height="auto"> <img src="Assets/image/SliderTest/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202018-04-26%2011.21.58.png" width="50vw" height="auto"> <img src="Assets/image/SliderTest/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202018-04-26%2011.21.58.png" width="50vw" height="auto"> <img src="Assets/image/SliderTest/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202018-04-26%2011.21.58.png" width="50vw" height="auto"> <img src="Assets/image/SliderTest/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202018-04-26%2011.21.58.png" width="50vw" height="auto">
+    </section>-->
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <script src="Assets/js/slick.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <script type="text/javascript">
+        $('.slider').slick({
+            arrows: false
+        });
+    </script>
 </body>
 
 </html>

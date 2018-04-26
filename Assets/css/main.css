@@ -1,3 +1,5 @@
+/*Import*/
+
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 @import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
 html {
@@ -10,11 +12,29 @@ html {
     box-sizing: border-box;
 }
 
+/*Initialize*/
+
 body {
     margin: 0px, 0px, 0px, 0px;
     padding: 0, 0, 0, 0;
     font-family: "Noto Sans JP", "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    font-weight: 200;
+}
 
+/*Fix content*/
+
+header {
+    position: fixed;
+    width: 100vw;
+    height: 5em;
+    top: 0px;
+    right: 0px;
+    background-color: white;
+    z-index: 100;
+}
+
+div.StartContent {
+    margin-top: calc(100vh + 2em);
 }
 
 div.Title {
@@ -30,6 +50,9 @@ div.Title {
     -moz-background-size: cover;
     background-size: cover;
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 div.Title::before {
@@ -45,13 +68,11 @@ div.Title::before {
 }
 
 div.Title span.Title {
-    position: absolute;
     color: white;
     letter-spacing: .2em;
     font-weight: 300;
-    font-size: 5em;
-    top: 40%;
-    left: 32%;
+    font-size: 10vw;
+    position: relative;
 }
 
 div.Title span.Sub {
@@ -59,7 +80,33 @@ div.Title span.Sub {
     color: white;
     letter-spacing: .1em;
     font-weight: 300;
-    font-size: 1em;
-    top: 53%;
-    left: 42%;
+    font-size: 2vw;
+    margin-top: 10%;
+}
+
+/*Icons*/
+
+i.Connect {
+    text-decoration: none;
+    color: black;
+    font-style: normal;
+    font-size: 3em;
+}
+
+i.Connect::before {
+    content: "\f26b";
+    font-family: FontAwesome;
+
+}
+
+/*Slider*/
+
+section.Slider {
+    width: calc(100vw-2em);
+    margin: 1em, 1em, 1em, 1em;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    text-align: center;
 }
