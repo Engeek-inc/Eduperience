@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" charset="utf-8">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Assets/css/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="Assets/js/buttonBehaviour.js"></script>
+</head>
+
+<body>
+    <h1 class="Center">正解</h1>
+    <div class="Center">
+        <img src="Assets/image/Check.png" class="Curcle Center" />
+    </div>
+    <article class="Explain Center">Aを入れるとBになります</article>
+    <button>ボタン</button>
+    <script>
+        $("button").click(() => {
+            alert("OK");
+        });
+
+    </script>
+</body>
+
+</html>

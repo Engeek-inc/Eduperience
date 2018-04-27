@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tseetr</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="page"></div>
+</body>
+
+</html>
+<script>
+    $.ajax('Start.html', {
+        timeout: 1000, // 1000 ms
+        datatype: 'html'
+    }).then(function(data) {
+        var out_html = $($.parseHTML(data)); //parse
+        $('#page').empty().append(out_html.filter('#sub')[0].innerHTML); //insert
+        $('#page2').empty().append(out_html.filter('#sub2')[0].innerHTML); //insert
+    }, function(jqXHR, textStatus) {
+        if (textStatus !== "success") {
+            var txt = "<p>textStatus:" + textStatus + "</p>" +
+                "<p>status:" + jqXHR.status + "</p>" +
+                "<p>responseText : </p><div>" + jqXHR.responseText +
+                "</div>";
+            $('#page').html(txt);
+            $('#page2').html(txt);
+        }
+    });
+
+</script>
