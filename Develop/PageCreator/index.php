@@ -1,7 +1,21 @@
 <?php
 function make_html() {
 ?>
-    <div>書き込みたい要素</div>
+    <!DOCTYPE html>
+    <html lang="jp">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <link rel="stylesheet" href="Assets/css/main.css">
+    </head>
+
+    <body>
+        こんにちは<button>aaa</button>
+    </body>
+
+    </html>
+
     <?php
 }
 
